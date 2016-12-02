@@ -8,6 +8,9 @@ var RecordStore = function(name, city, balance){
 RecordStore.prototype = {
   add: function(record){
     this.inventory.push(record);
+  },
+  list: function(){
+    return this.inventory;
   }
 };
 
