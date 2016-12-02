@@ -11,6 +11,10 @@ RecordStore.prototype = {
   },
   list: function(){
     return this.inventory;
+  },
+  sell: function(record){
+    this.inventory.splice(this.inventory.indexOf(record), 1);
+    this.balance += record.price;
   }
 };
 
