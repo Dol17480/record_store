@@ -5,9 +5,4 @@ var Record = function(artist, title, price, quantity){
   this.quantity = quantity;
 };
 
-// Record.prototype = {
-//   };
-
-
-
 module.exports = Record;
