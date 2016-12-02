@@ -6,9 +6,11 @@ var RecordStore = require("../record_store")
 describe("recordStore", function(){
 
   var recordStore;
+  var record;
 
   beforeEach(function(){
     recordStore = new RecordStore("Plugd", "Cork", 1000);
+    record = new Record("Radiohead", "A Moon Shaped Pool", 5, 10);
   });
 
   it('should have name', function(){
@@ -22,6 +24,11 @@ describe("recordStore", function(){
   it('should have balance', function(){
     assert.equal(1000, recordStore.balance);
   });
+
+  it('should add records', function(){
+    recordStore.add(record);
+    assert.equal(1, recordStore.inventory.length);
+  })
 
  });
 
